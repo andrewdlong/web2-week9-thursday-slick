@@ -1,0 +1,77 @@
+/* =============
+    Slick
+============= */
+
+#slick{
+    display: grid;
+    grid-template-columns: 2vw 96vw 2vw;
+    // grid-template-columns: 10px auto 10px;
+    grid-template-areas: ". slick .";
+    overflow: hidden;
+    // background-color: $bg-color;
+    padding-top: 100px;
+
+    @include md{
+        grid-template-columns: auto 80% auto;
+    }
+
+    @include lg{
+        grid-template-columns: auto 70% auto;
+    }
+
+    @include xl{
+        grid-template-columns: auto 60% auto;
+    }
+
+    >div{
+        grid-area: slick;
+
+        .slick-prev:before, .slick-next:before{
+            color: $black;
+        }
+
+
+
+        #slide-1{
+            img{
+                width: 100%;
+            }
+        }
+
+        #slide-2{
+
+            background-image: url('../img/slick/table.jpg');
+            background-size: cover;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h1{
+                font-size:rem-calc(40);
+                color: $white;
+                font-weight: 300;
+
+            }
+
+        }
+
+        #slide-3{
+            display: grid;
+            grid-template-columns: (1,1fr);
+            @include md{
+                grid-template-columns: 40% auto;
+            }
+            aside{
+                background-image: url('../img/slick/ship.jpg');
+                background-size: cover;
+                height: 500px;
+            }
+
+            article{
+                padding: 10px;
+                background-color:$white;
+            }
+        }
+    }
+}

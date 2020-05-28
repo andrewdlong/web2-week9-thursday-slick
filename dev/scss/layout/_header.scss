@@ -1,0 +1,22 @@
+/* =============
+    Header
+============= */
+#hero{
+    background-color: $blue;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    i{
+        color: $white;
+        font-size: rem-calc(50);
+        margin-bottom: 10px;
+    }
+
+    h1{
+        font-family: 'Josefin Slab', serif;
+        color: #fff;
+    }
+}
